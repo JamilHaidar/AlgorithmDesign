@@ -1,3 +1,4 @@
+# (value,weight)
 items = [(1,1),(6,2),(18,5),(22,6),(28,7)]
 total_weight = 11
 # Initialize opt table
