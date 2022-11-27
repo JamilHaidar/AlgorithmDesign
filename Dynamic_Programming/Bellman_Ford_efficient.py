@@ -34,7 +34,22 @@ print(f'Minimum path cost: {start_node[0]}')
 path = []
 start_node = start_node[1]
 while start_node!='t':
+    if start_node==None:
+        path.append('No path')
+        break
     path.append(start_node)
     start_node = successor[start_node]
 path.append('t')
 print('Path','->'.join(path))
+# To see all paths
+# for start_node in opt:
+#     path = []
+#     node = start_node
+#     while start_node!='t':
+#         if start_node==None:
+#             path.append('No path')
+#             break
+#         path.append(start_node)
+#         start_node = successor[start_node]
+#     path.append('t')
+#     print(f'{node}:   Path: {"->".join(path)}, Cost: {opt[node]}')

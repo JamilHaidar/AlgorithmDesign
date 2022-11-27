@@ -16,6 +16,6 @@ for i in range(1,len(nodes)):
         for edge in edges.get(node,[]):
             if opt[node][i][0]>opt[edge[0]][i-1][0]+edge[1]:
                 opt[node][i] = [opt[edge[0]][i-1][0]+edge[1],edge[0]+opt[edge[0]][i-1][1]]
-
+print(' ',' '.join([f'{str(i):12s}' for i in range(len(nodes))]))
 for node in opt:
-    print(node,' '.join([f'{str(elem):10s}' for elem in opt[node]]))
+    print(node,' '.join([f'{str(elem):12s}' for elem in opt[node]]))
